@@ -1,0 +1,97 @@
+/* Container styling */
+#drop-container {
+    display: flex;
+    margin: 50px auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Banner styling */
+#banner-h1 {
+    font-size: 6em;
+    padding: 0;
+    font-family: "IM Fell English SC", serif;
+}
+
+/* Input field styling */
+#kill-input, #select-boss {
+    height: 2em;
+    width: 12em;
+    border-radius: 0.5em;
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Button styling */
+#drop-button {
+    margin-top: 2em;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 2em;
+    font-family: "Roboto", sans-serif;
+}
+
+#reset-button{
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #003f83;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 2em;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Hover effects */
+#drop-button:hover, #reset-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Active effects */
+#drop-button:active, #reset-button:active {
+    background-color: #004080;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+}
+
+/* Focus effects */
+#drop-button:focus, #reset-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #4ba2ff;
+}
+
+/* Font families */
+.im-fell-english-sc-regular {
+    font-family: "IM Fell English SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (max-width: 450px){
+    #banner-h1{
+        text-align: center;
+        font-size: 3em;
+    }
+}
