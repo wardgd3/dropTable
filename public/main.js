@@ -32,12 +32,19 @@ export function getPlayerDrop(dropTable) {
 }
 
 export function createDropTable(data) {
+    const container = document.createElement('div');
+    container.style.display = 'block';
+    container.style.overflowX = 'auto';
+    container.style.whiteSpace = 'nowrap';
+    container.style.marginTop = '20px';
+
     const table = document.createElement('table');
     table.style.width = '100%';
     table.style.borderCollapse = 'collapse';
-    table.style.margin = '20px 0';
     table.style.fontSize = '18px';
     table.style.textAlign = 'left';
+
+    container.appendChild(table);
 
     const headerRow = table.insertRow();
 
@@ -98,16 +105,24 @@ export function createDropTable(data) {
         totalEarnings += value.price * value.quantity;
     }
 
+    document.getElementById('loot-tracker').appendChild(container);
     return { table, totalEarnings };
 }
 
 export function createSummaryTable(totalEarnings, averageEarnings, grandTotal, killCount, uniqueItemsCount) {
+    const container = document.createElement('div');
+    container.style.display = 'block';
+    container.style.overflowX = 'auto';
+    container.style.whiteSpace = 'nowrap';
+    container.style.marginTop = '20px';
+
     const table = document.createElement('table');
     table.style.width = '100%';
     table.style.borderCollapse = 'collapse';
-    table.style.margin = '20px 0';
     table.style.fontSize = '18px';
     table.style.textAlign = 'left';
+
+    container.appendChild(table);
 
     const headerRow = table.insertRow();
     const headers = ['Total Earnings', 'Average per Kill', 'Grand Total', 'Total Kills', 'Unique Items'];
@@ -129,20 +144,27 @@ export function createSummaryTable(totalEarnings, averageEarnings, grandTotal, k
         td.style.border = '1px solid #ddd';
         td.style.padding = '8px';
         td.style.textAlign = 'left';
-        //td.style.color = '#ff6f61'; // Nice complementary color to blue
         row.appendChild(td);
     });
 
+    document.getElementById('summary-table').appendChild(container);
     return table;
 }
 
 export function createLootTrackerTable(drops) {
+    const container = document.createElement('div');
+    container.style.display = 'block';
+    container.style.overflowX = 'auto';
+    container.style.whiteSpace = 'nowrap';
+    container.style.marginTop = '20px';
+
     const table = document.createElement('table');
     table.style.width = '100%';
     table.style.borderCollapse = 'collapse';
-    table.style.margin = '20px 0';
     table.style.fontSize = '18px';
     table.style.textAlign = 'left';
+
+    container.appendChild(table);
 
     const headerRow = table.insertRow();
     const headers = ['Item', 'Quantity', 'Rarity', 'Total Price'];
@@ -185,8 +207,10 @@ export function createLootTrackerTable(drops) {
         priceCell.style.textAlign = 'left';
     }
 
+    document.getElementById('loot-tracker').appendChild(container);
     return table;
 }
+
 
 
 
